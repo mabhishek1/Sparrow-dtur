@@ -5,7 +5,11 @@
     .navbar-brand {
         margin-right: 30px;
     }
-  
+    .dorne-search-btn > a,
+    .dorne-signin-btn > a {
+        margin-right: 15px;
+        font-size: 14px;
+    }
     .navbar-expand-lg .navbar-nav .nav-link {
         padding-right: 7px;
         padding-left: 7px;
@@ -51,13 +55,18 @@
     .sticky .navbar-toggler {
         margin: 17px 0
     }
-    #sparrowNav {
+    #dorneNav {
         padding: 30px;
         background-color: #341a79;
         box-shadow: 1px 9px 10px rgba(255, 255, 255, 0.15);
         border-radius: 0 0 3px 3px
     }
-    
+    .dorne-search-btn > a,
+    .dorne-signin-btn > a {
+        margin-right: 0;
+        margin-left: 15px;
+        padding: 10px 0;
+    }
     .hero-content h2 {
         color: #fff;
         font-size: 42px;
@@ -71,7 +80,9 @@
         padding: 0 10px;
         margin-right: 5px;
     }
- 
+    .dorne-btn {
+        min-width: 150px;
+    }
     .single-catagory-area .catagory-content h6 {
         font-size: 13px;
     }
@@ -129,24 +140,7 @@
     }
 }
 
-@media (min-width: 414px) and (max-width: 736px){
-	.cont .box{
-		width: 100%;
-	}
-}
-
-
-@media (min-width: 768px) and (max-width: 1023px){
-	.cont .box{
-		width: 100%;
-	}
-}
-
-
-
-
-
-@media (min-width: 320px) and (max-width: 830px) {
+@media (min-width: 320px) and (max-width: 767px) {
     .header_area {
         padding: 0;
     }
@@ -163,13 +157,18 @@
     .sticky .navbar-toggler {
         margin: 17px 0;
     }
-    #sparrowNav {
+    #dorneNav {
         padding: 15px;
         background-color: #0c3e7e;
         box-shadow: 1px 9px 10px rgba(255, 255, 255, 0.15);
         border-radius: 0 0 3px 3px
     }
-    
+    .dorne-search-btn > a,
+    .dorne-signin-btn > a {
+        margin-right: 0;
+        margin-left: 15px;
+        padding: 10px 0;
+    }
     .hero-content h2 {
         color: #fff;
         font-size: 24px;
@@ -181,7 +180,9 @@
         padding: 0 10px;
         margin-right: 5px;
     }
-    
+    .dorne-btn {
+        min-width: 150px;
+    }
     .all-catagories {
         top: 0;
         padding: 30px 0;
@@ -219,8 +220,8 @@
         top: 15px;
         left: 15px;
     }
-    .sparrow-features-destinations-area
-    {
+    .dorne-features-destinations-area,
+    .dorne-features-restaurant-area {
         padding: 100px 15px;
     }
     .single-catagory-area {
@@ -238,7 +239,10 @@
     .clients-logo > img {
         padding: 30px;
     }
-    
+    .dorne-footer-area {
+        padding: 50px 0;
+        text-align: center;
+    }
     .footer-text {
         margin-bottom: 30px;
     }
@@ -284,8 +288,19 @@
         padding: 30px 5px;
         font-size: 12px;
     }
-    
-    
+    .contact-form-area,
+    .dorne-map-area {
+        -webkit-box-flex: 0;
+            -ms-flex: 0 0 100%;
+                flex: 0 0 100%;
+        width: 100%;
+    }
+    .contact-form-area {
+        padding: 50px 15px;
+    }
+    .dorne-map-area {
+        height: 500px;
+    }
 }
 
 @media (min-width: 576px) and (max-width: 767px) {

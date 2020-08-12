@@ -1,6 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<style>
+.container-car { margin:150px auto;}
+#mixedSlider {
+  position: relative;
+}
+#mixedSlider .MS-content {
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 0 5%;
+}
+#mixedSlider .MS-content .item {
+  display: inline-block;
+  width: 33.3333%;
+  position: relative;
+  vertical-align: top;
+  overflow: hidden;
+  height: 100%;
+  white-space: normal;
+  padding: 0 10px;
+
+}
+@media (max-width: 991px) {
+  #mixedSlider .MS-content .item {
+    width: 50%;
+  }
+}
+@media (max-width: 767px) {
+  #mixedSlider .MS-content .item {
+    width: 100%;
+  }
+}
+#mixedSlider .MS-content .item .imgTitle {
+  position: relative;
+  width: 100%;
+}
+#mixedSlider .MS-content .item .imgTitle .blogTitle {
+  margin: 0;
+  text-align: left;
+  letter-spacing: 2px;
+  color: #252525;
+  font-style: italic;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 100%;
+  bottom: 0;
+  font-weight: bold;
+  padding: 0 0 2px 10px;
+}
+#mixedSlider .MS-content .item .imgTitle img {
+  height: auto;
+  width: 100%;
+
+}
+#mixedSlider .MS-content .item p {
+  font-size: 16px;
+  margin: 2px 10px 0 5px;
+  text-indent: 15px;
+}
+#mixedSlider .MS-content .item a {
+  float: right;
+  margin: 0 20px 0 0;
+  font-size: 16px;
+  font-style: italic;
+  color: rgba(173, 0, 0, 0.82);
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: linear 0.1s;
+}
+#mixedSlider .MS-content .item a:hover {
+  text-shadow: 0 0 1px grey;
+}
+#mixedSlider .MS-controls button {
+  position: absolute;
+  border: none;
+  background-color: transparent;
+  outline: 0;
+  font-size: 50px;
+  top: 95px;
+  color: rgba(0, 0, 0, 0.4);
+  transition: 0.15s linear;
+}
+#mixedSlider .MS-controls button:hover {
+  color: rgba(0, 0, 0, 0.8);
+}
+@media (max-width: 992px) {
+  #mixedSlider .MS-controls button {
+    font-size: 30px;
+  }
+}
+@media (max-width: 767px) {
+  #mixedSlider .MS-controls button {
+    font-size: 20px;
+  }
+}
+#mixedSlider .MS-controls .MS-left {
+  left: 0px;
+}
+@media (max-width: 767px) {
+  #mixedSlider .MS-controls .MS-left {
+    left: -10px;
+  }
+}
+#mixedSlider .MS-controls .MS-right {
+  right: 0px;
+}
+@media (max-width: 767px) {
+  #mixedSlider .MS-controls .MS-right {
+    right: -10px;
+  }
+}
+
+
+
+
+</style>
 
 <head>
 	<meta charset="UTF-8">
@@ -42,86 +157,6 @@
      <link href="maybe.css" rel="stylesheet">   
      <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <link rel="stylesheet" href="css_asd/main.css">
-
-  
-
-    <script src="js_sl/jssor.slider-28.0.0.min.js" type="text/javascript"></script>
-    <script type="text/javascript">
-        window.jssor_1_slider_init = function() {
-
-            var jssor_1_SlideshowTransitions = [
-              {$Duration:800,x:0.3,$During:{$Left:[0.3,0.7]},$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-              {$Duration:800,x:-0.3,$SlideOut:true,$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-              {$Duration:800,x:-0.3,$During:{$Left:[0.3,0.7]},$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-              {$Duration:800,x:0.3,$SlideOut:true,$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-              {$Duration:800,y:0.3,$During:{$Top:[0.3,0.7]},$Easing:{$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-              {$Duration:800,y:-0.3,$SlideOut:true,$Easing:{$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-              {$Duration:800,y:-0.3,$During:{$Top:[0.3,0.7]},$Easing:{$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-              {$Duration:800,y:0.3,$SlideOut:true,$Easing:{$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-              {$Duration:800,x:0.3,$Cols:2,$During:{$Left:[0.3,0.7]},$ChessMode:{$Column:3},$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-              {$Duration:800,x:0.3,$Cols:2,$SlideOut:true,$ChessMode:{$Column:3},$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-              {$Duration:800,y:0.3,$Rows:2,$During:{$Top:[0.3,0.7]},$ChessMode:{$Row:12},$Easing:{$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-              {$Duration:800,y:0.3,$Rows:2,$SlideOut:true,$ChessMode:{$Row:12},$Easing:{$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-              {$Duration:800,y:0.3,$Cols:2,$During:{$Top:[0.3,0.7]},$ChessMode:{$Column:12},$Easing:{$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-              {$Duration:800,y:-0.3,$Cols:2,$SlideOut:true,$ChessMode:{$Column:12},$Easing:{$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-              {$Duration:800,x:0.3,$Rows:2,$During:{$Left:[0.3,0.7]},$ChessMode:{$Row:3},$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-              {$Duration:800,x:-0.3,$Rows:2,$SlideOut:true,$ChessMode:{$Row:3},$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-              {$Duration:800,x:0.3,y:0.3,$Cols:2,$Rows:2,$During:{$Left:[0.3,0.7],$Top:[0.3,0.7]},$ChessMode:{$Column:3,$Row:12},$Easing:{$Left:$Jease$.$InCubic,$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-              {$Duration:800,x:0.3,y:0.3,$Cols:2,$Rows:2,$During:{$Left:[0.3,0.7],$Top:[0.3,0.7]},$SlideOut:true,$ChessMode:{$Column:3,$Row:12},$Easing:{$Left:$Jease$.$InCubic,$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-              {$Duration:800,$Delay:20,$Clip:3,$Assembly:260,$Easing:{$Clip:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-              {$Duration:800,$Delay:20,$Clip:3,$SlideOut:true,$Assembly:260,$Easing:{$Clip:$Jease$.$OutCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-              {$Duration:800,$Delay:20,$Clip:12,$Assembly:260,$Easing:{$Clip:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-              {$Duration:800,$Delay:20,$Clip:12,$SlideOut:true,$Assembly:260,$Easing:{$Clip:$Jease$.$OutCubic,$Opacity:$Jease$.$Linear},$Opacity:2}
-            ];
-
-            var jssor_1_options = {
-              $AutoPlay: 1,
-              $SlideshowOptions: {
-                $Class: $JssorSlideshowRunner$,
-                $Transitions: jssor_1_SlideshowTransitions,
-                $TransitionsOrder: 1
-              },
-              $ArrowNavigatorOptions: {
-                $Class: $JssorArrowNavigator$
-              },
-              $ThumbnailNavigatorOptions: {
-                $Class: $JssorThumbnailNavigator$,
-                $SpacingX: 5,
-                $SpacingY: 5
-              }
-            };
-
-            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
-
-            /*#region responsive code begin*/
-
-            var MAX_WIDTH = 980;
-
-            function ScaleSlider() {
-                var containerElement = jssor_1_slider.$Elmt.parentNode;
-                var containerWidth = containerElement.clientWidth;
-
-                if (containerWidth) {
-
-                    var expectedWidth = Math.min(MAX_WIDTH || containerWidth, containerWidth);
-
-                    jssor_1_slider.$ScaleWidth(expectedWidth);
-                }
-                else {
-                    window.setTimeout(ScaleSlider, 30);
-                }
-            }
-
-            ScaleSlider();
-
-            $Jssor$.$AddEvent(window, "load", ScaleSlider);
-            $Jssor$.$AddEvent(window, "resize", ScaleSlider);
-            $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
-            /*#endregion responsive code end*/
-        };
-    </script>
-
 </head>
 
 <body>
@@ -131,7 +166,7 @@
             <div class="row h-100">
                 <div class="col-12 h-100">
                     <nav class="h-100 navbar navbar-expand-lg">
-                        <!-- <a class="navbar-brand" href="index.html"><img src="images/icon.png" alt=""></a> -->
+                        <a class="navbar-brand" href="index.html"><img src="images/icon.png" alt=""></a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#dorneNav" aria-controls="dorneNav" aria-expanded="false" aria-label="Toggle navigation"><span class="fa fa-bars"></span></button>
                         <!-- Nav -->
                         <div class="collapse navbar-collapse" id="dorneNav">
@@ -187,7 +222,7 @@
                         <div class="banner_text_iner">
                             <h1>Sparrow D'Tur</h1>
                             <p>Start Your Journey</p>
-                           
+                            <a href="#" class="btn_1">Book Now</a>
                         </div>
                     </div>
                 </div>
@@ -195,214 +230,7 @@
         </div>
     </section>
 
-        <section class="s-content s-content--narrow s-content--no-padding-bottom">
 
-        <article class="row format-standard">
-
-            <div class="s-content__header col-full">
-                <h1 class="s-content__header-title" style="color: #0c3e7e;">
-                    Sikkim
-                </h1>
-                <ul class="s-content__header-meta">
-                    <li class="date">November 3, 2019</li>
-                    
-                </ul>
-            </div> <!-- end s-content__header -->
-            
-               <div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:980px;height:480px;overflow:hidden;visibility:hidden;">
-        <!-- Loading Screen -->
-        <div data-u="loading" class="jssorl-009-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
-            <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="imgages/spin.svg" />
-        </div>
-        <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:980px;height:380px;overflow:hidden;">
-            <div>
-                <img data-u="image" src="images/bg1.jpg" />
-                <img data-u="thumb" src="images/bg1.jpg" />
-            </div>
-            <div>
-                <img data-u="image" src="images/hero_bg_2.jpg" />
-                <img data-u="thumb" src="images/hero_bg_2.jpg" />
-            </div>
-            <div>
-                <img data-u="image" src="images/has.jpg" />
-                <img data-u="thumb" src="images/has.jpg" />
-            </div>
-            <div>
-                <img data-u="image" src="images/tours_2.jpg" />
-                <img data-u="thumb" src="images/tours_2.jpg" />
-            </div>
-            <div>
-                <img data-u="image" src="images/tours_1.jpg" />
-                <img data-u="thumb" src="images/tours_1.jpg" />
-            </div>
-
-            <div>
-                <img data-u="image" src="images/tours_bg.jpg" />
-                <img data-u="thumb" src="images/tours_bg.jpg" />
-            </div>
-            
-            <div>
-                <img data-u="image" src="images/bg3.jpg" />
-                <img data-u="thumb" src="images/bg3.jpg" />
-            </div><a data-u="any" href="https://www.jssor.com" style="display:none">slider in bootstrap</a>
-        </div>
-        <!-- Thumbnail Navigator -->
-        <div data-u="thumbnavigator" class="jssort101" style="position:absolute;left:0px;bottom:0px;width:980px;height:100px;background-color:#000;" data-autocenter="1" data-scale-bottom="0.75">
-            <div data-u="slides">
-                <div data-u="prototype" class="p" style="width:190px;height:90px;">
-                    <div data-u="thumbnailtemplate" class="t"></div>
-                    <svg viewbox="0 0 16000 16000" class="cv">
-                        <circle class="a" cx="8000" cy="8000" r="3238.1"></circle>
-                        <line class="a" x1="6190.5" y1="8000" x2="9809.5" y2="8000"></line>
-                        <line class="a" x1="8000" y1="9809.5" x2="8000" y2="6190.5"></line>
-                    </svg>
-                </div>
-            </div>
-        </div>
-        <!-- Arrow Navigator -->
-        <div data-u="arrowleft" class="jssora106" style="width:55px;height:55px;top:162px;left:30px;" data-scale="0.75">
-            <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
-                <circle class="c" cx="8000" cy="8000" r="6260.9"></circle>
-                <polyline class="a" points="7930.4,5495.7 5426.1,8000 7930.4,10504.3 "></polyline>
-                <line class="a" x1="10573.9" y1="8000" x2="5426.1" y2="8000"></line>
-            </svg>
-        </div>
-        <div data-u="arrowright" class="jssora106" style="width:55px;height:55px;top:162px;right:30px;" data-scale="0.75">
-            <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
-                <circle class="c" cx="8000" cy="8000" r="6260.9"></circle>
-                <polyline class="a" points="8069.6,5495.7 10573.9,8000 8069.6,10504.3 "></polyline>
-                <line class="a" x1="5426.1" y1="8000" x2="10573.9" y2="8000"></line>
-            </svg>
-        </div>
-    </div>
-
-    <script type="text/javascript">jssor_1_slider_init();
-    </script>
-
-   
-            <div class="col-full s-content__main">
-              <br>
-              <h2 style="color: #0c3e7e; font-weight: bold; text-decoration: underline; font-size: 25px;">About The Place</h2>
-              <br>
-                <p class="lead">Duis ex ad cupidatat tempor Excepteur cillum cupidatat fugiat nostrud cupidatat dolor sunt sint sit nisi est eu exercitation incididunt adipisicing veniam velit id fugiat enim mollit amet anim veniam dolor dolor irure velit commodo cillum sit nulla ullamco magna amet magna cupidatat qui labore cillum sit in tempor veniam consequat non laborum adipisicing aliqua ea nisi sint.</p>
-                                    
-            </div> 
-
-        </article>
-
-       <div class="container">
-
-             <div class="col-full tour_d" style="padding-top: 30px;">
-              <h1 style="color: #0c3e7e; font-weight: bold; text-decoration: underline; font-size: 35px; text-align: center; padding-bottom: 16px;">Tour Description
-              </h1>
-                  
-            </div> 
-   
-    <ul class="timeline">
-        <li>
-          <div class="timeline-badge"><i class="fa fa-globe"></i></div>
-          <div class="timeline-panel" style="background-color: #e84c47;">
-            <div class="timeline-heading">
-              <h3 class="timeline-title" style="color: white; font-weight: bold; text-decoration: underline;">Mussum ipsum cacilds</h3>
-             
-            </div>
-            <div class="timeline-body">
-              <br><p style="color: white; font-size: 15px;">Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.
-              Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis. Interagi no mé, cursus quis, vehicula ac nisi. Aenean vel dui dui. Nullam leo erat, aliquet quis tempus a, posuere ut mi. Ut scelerisque neque et turpis posuere pulvinar pellentesque nibh ullamcorper. Pharetra in mattis molestie, volutpat elementum justo. Aenean ut ante turpis. Pellentesque laoreet mé vel lectus scelerisque interdum cursus velit auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac mauris lectus, non scelerisque augue. Aenean justo massa.</p>
-            </div>
-          </div>
-        </li>
-        <li class="timeline-inverted">
-          <div class="timeline-badge warning"><i class="fa fa-globe"></i></div>
-           <div class="timeline-panel" style="background-color: #4bd9bf;">
-            <div class="timeline-heading">
-              <h3 class="timeline-title" style="color: white; font-weight: bold; text-decoration: underline;">Mussum ipsum cacilds</h3>
-             
-            </div>
-            <div class="timeline-body">
-              <br><p style="color: white; font-size: 15px;">Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.
-              Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis. Interagi no mé, cursus quis, vehicula ac nisi. Aenean vel dui dui. Nullam leo erat, aliquet quis tempus a, posuere ut mi. Ut scelerisque neque et turpis posuere pulvinar pellentesque nibh ullamcorper. Pharetra in mattis molestie, volutpat elementum justo. Aenean ut ante turpis. Pellentesque laoreet mé vel lectus scelerisque interdum cursus velit auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac mauris lectus, non scelerisque augue. Aenean justo massa. </p>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="timeline-badge danger"><i class="fa fa-globe"></i></div>
-          <div class="timeline-panel" style="background-color: #ff9e09">
-            <div class="timeline-heading">
-              <h3 class="timeline-title" style="color: white; font-weight: bold; text-decoration: underline;">Mussum ipsum cacilds</h3>
-             
-            </div>
-            <div class="timeline-body">
-             <br> <p style="color: white; font-size: 15px;">Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.
-              Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis. Interagi no mé, cursus quis, vehicula ac nisi. Aenean vel dui dui. Nullam leo erat, aliquet quis tempus a, posuere ut mi. Ut scelerisque neque et turpis posuere pulvinar pellentesque nibh ullamcorper. Pharetra in mattis molestie, volutpat elementum justo. Aenean ut ante turpis. Pellentesque laoreet mé vel lectus scelerisque interdum cursus velit auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac mauris lectus, non scelerisque augue. Aenean justo massa. </p>
-            </div>
-          </div>
-        </li>
-        <li class="timeline-inverted">
-          <div class="timeline-badge warning"><i class="fa fa-globe"></i></div>
-          <div class="timeline-panel" style="background-color: #8fb800;">
-            <div class="timeline-heading">
-              <h3 class="timeline-title" style="color: white; font-weight: bold; text-decoration: underline;">Mussum ipsum cacilds</h3>
-             
-            </div>
-            <div class="timeline-body">
-              <br><p style="color: white; font-size: 15px;">Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.
-              Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis. Interagi no mé, cursus quis, vehicula ac nisi. Aenean vel dui dui. Nullam leo erat, aliquet quis tempus a, posuere ut mi. Ut scelerisque neque et turpis posuere pulvinar pellentesque nibh ullamcorper. Pharetra in mattis molestie, volutpat elementum justo. Aenean ut ante turpis. Pellentesque laoreet mé vel lectus scelerisque interdum cursus velit auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac mauris lectus, non scelerisque augue. Aenean justo massa.</p>
-            </div>
-          </div>
-        </li>
-       
-       
-    </ul>
-</div>
-
-  <div id="wrapper">
-    <div class="container">
-        <div class="row">
-              <div class="col-md-4">
-                  <div class="circle c4 img-circle">
-                      <h4 class="red">Price</h4><br>
-                      <span class="icon red"><i class="fa fa-inr"></i></span>
-                      <span class="price-small red">10,000</span>
-                       <p>Affordable Price</p><br>
-                      <button type="button" class="btn btn-danger">Amount</button>
-                  </div>
-              </div>
-          
-              <div class="col-md-4">
-                  <div class="circle c2 img-circle">
-                      <h4 class="yellow">Tour Timeline</h4>
-                      
-                      <span class="price-small yellow">4 days</span><br>
-                      <span class="price-small">3 nights</span>
-                      <p>Great</p><br>
-                      <button type="button" class="btn btn-warning">Plan</button>
-                  </div>
-              </div>
-          
-                    <div class="col-md-4">
-                  <div class="circle c1 img-circle">
-                      <h4 class="blue">Transport Details</h4>
-                      
-                      <span class="price-small">By</span><br>
-                      <span class="price-small blue">Bus, Train</span>
-                      <p>Fastest Mode</p>
-                      <button type="button" class="btn btn-info">Choose</button>
-                  </div>
-              </div>
-          
-        </div>
-    </div>
-</div>
-
-
-</section>
-
-
-
-
-
-   
 
 
 
@@ -450,7 +278,7 @@
           <div class="col-md-12 text-center">
 
             <p>
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved<i class="#" aria-hidden="true"></i> of <a href="https://www.ddm-labs.in" target="_blank">DDM Labs</a>
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Designed & Developed by Subhodip Roy and Abhishek Mukherjee <i class="#" aria-hidden="true"></i> of <a href="https://www.ddm-labs.in" target="_blank">DDM Labs</a>
   </p>
           </div>
         </div>
@@ -459,7 +287,17 @@
     
 
 
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script> 
+    <script src="multislider.js"></script> 
 
+
+    <script>
+
+        $('#mixedSlider').multislider({
+            duration: 750,
+            interval: 3000
+        });
+    </script>
 
     <script src="js1/jquery-3.3.1.min.js"></script>
     <script src="js1/jquery-migrate-3.0.1.min.js"></script>

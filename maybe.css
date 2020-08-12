@@ -180,7 +180,7 @@ li {
 }
 
 
-.sparrow-features-destinations-area{
+.dorne-features-destinations-area{
     padding: 100px 35px;
     position: relative;
     z-index: 1;
@@ -222,7 +222,7 @@ li {
 }
 
 .single-features-area:hover {
-    background-color: #0c3e7e;
+    background-color: #7643ea;
     box-shadow: 3px 15px 30px rgba(0, 0, 0, 0.15);
 }
 
